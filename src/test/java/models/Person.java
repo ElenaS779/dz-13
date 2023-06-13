@@ -1,0 +1,43 @@
+package models;
+import com.opencsv.bean.CsvBindByName;
+
+public class Person {
+
+    @CsvBindByName(column = "name")
+    private String name;
+    @CsvBindByName(column = "lastName")
+    private String lastName;
+    @CsvBindByName(column = "age")
+    private int age;
+
+    public Person(String name, String lastName, int age) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    public String getFirstName() {
+
+        return name;
+    }
+
+    public void setFirstName(String firstName) {
+        this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
